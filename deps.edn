@@ -1,0 +1,4 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.0"}
+        com.cognitect/fern {:mvn/version "0.1.5"}
+        hiccup {:mvn/version "1.0.5"}}}

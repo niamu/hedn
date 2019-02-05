@@ -1,0 +1,12 @@
+{content [:div#posts
+          [:div#page-header
+           [:h1 (:subtitle @params)]]
+          (map (fn [group]
+                 [:div
+                  [:h4 (:group group)]
+                  [:ul
+                   (map (fn [post]
+                          [:li (:date post) " - "
+                           [:a {:href (:uri post)} (:title post)]])
+                        (:posts group))]])
+               (:groups @params))]}
